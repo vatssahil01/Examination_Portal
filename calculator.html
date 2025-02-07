@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <div id="calculator" class="calculator">
+        <div class="display-container">
+            <input type="text" id="display" class="display" placeholder="0" readonly>
+        </div>
+        <div class="buttons">
+            <button class="button" data-value="sin">sin</button>
+            <button class="button" data-value="cos">cos</button>
+            <button class="button" data-value="tan">tan</button>
+            <button class="button" data-value="sqrt">√</button>
+            <button class="button" data-value="log">log</button>
+            <button class="button" data-value="ln">ln</button>
+            <button class="button" data-value="exp">exp</button>
+            <button class="button" data-value="^">x^y</button>
+            <button class="button" data-value="(">(</button>
+            <button class="button" data-value=")">)</button>
+            <button class="button" data-value="1/x">1/x</button>
+            <button class="button" data-value="x^2">x²</button>
+            <button class="button" data-value="7">7</button>
+            <button class="button" data-value="8">8</button>
+            <button class="button" data-value="9">9</button>
+            <button class="button" data-value="/">÷</button>
+            <button class="button" data-value="*">×</button>
+            <button class="button" data-value="5">5</button>
+            <button class="button" data-value="6">6</button>
+            <button class="button" data-value="4">4</button>
+            <button class="button" data-value="-">-</button>
+            <button class="button" data-value="0">0</button>
+            <button class="button" data-value="1">1</button>
+            <button class="button" data-value="2">2</button>
+            <button class="button" data-value="3">3</button>
+            <button class="button" data-value="+">+</button>
+            <button class="button" data-value=".">.</button>
+            <button class="button" data-value="AC">AC</button>
+            <button class="button" data-value="⌫" id="backspace">⌫</button>
+            <button class="button equal" data-value="=">=</button>
+
+        </div>
+    </div>
+
+    <script>
+        const display = document.getElementById('display');
+        const buttons = document.querySelectorAll('.button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.getAttribute('data-value');
+
+                if (value === 'AC') {
+                    display.value = '';
+                } else if (value === '⌫') {
+                    display.value = display.value.slice(0, -1);
+                } else if (value === '=') {
+                    try {
+                        display.value = eval(display.value.replace("^", "**"));
+                    } catch {
+                        display.value = 'Error';
+                    }
+                } else if (value === 'sin') {
+                    display.value = Math.sin(eval(display.value) * Math.PI / 180);
+                } else if (value === 'cos') {
+                    display.value = Math.cos(eval(display.value) * Math.PI / 180);
+                } else if (value === 'tan') {
+                    display.value = Math.tan(eval(display.value) * Math.PI / 180);
+                } else if (value === 'log') {
+                    display.value = Math.log10(eval(display.value));
+                } else if (value === 'ln') {
+                    display.value = Math.log(eval(display.value));
+                } else if (value === 'sqrt') {
+                    display.value = Math.sqrt(eval(display.value));
+                } else if (value === 'exp') {
+                    display.value = Math.exp(eval(display.value));
+                } else if (value === 'x^2') {
+                    display.value = Math.pow(eval(display.value), 2);
+                } else if (value === '1/x') {
+                    display.value = 1 / eval(display.value);
+                } else {
+                    display.value += value;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

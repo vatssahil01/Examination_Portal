@@ -1,0 +1,470 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+.nav {
+    text-align: center;
+    font-size: 2rem;
+    color: #077bc3;
+    font-weight: 600;
+    border: 2px solid #077bc3;
+    height: 45px;
+    line-height: 45px;
+}
+
+.header {
+    background-color: white;
+    color: #077bc3;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#greetings {
+    font-size: 2rem;
+    font-weight: 600;
+    position: relative;
+    left: 10%;
+}
+
+/* Ensure the modal is below the button */
+.modal-container {
+    position: relative;
+    left: 26%;
+    height: 37px;
+}
+
+.calculatorModal {
+    position: absolute;
+    top: 100%;
+    left: -74px;
+    width: 380px;
+    height: 480px;
+    transform: translateY(10px);
+    /* Adjust the space below the button */
+    z-index: 100;
+    /* Make sure it stays above other elements */
+    display: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+iframe{
+    height: 315px;
+    margin-right: 15px;
+}
+#btn {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    color: #0097A0;
+    background-color: white;
+    border: 2px solid #0097A0;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    left: 26%;
+    height: 37px;
+}
+
+#time {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #FBA4A4;
+    color: white;
+    position: relative;
+    right: 0%;
+    height: 30px;
+    width: 110px;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.container_1 {
+    flex: 3;
+    background-color: #D5E9F5;
+    min-height: 600px;
+    padding: 1rem;
+    width: 73%;
+    height: 625px;
+}
+
+.container_2 {
+    flex: 1;
+    background-color: #F5F9FF;
+    min-height: 600px;
+    padding: 1rem;
+    width: 23.7%;
+    position: absolute;
+    top: 16.2%;
+    right: 0;
+    height: 600px;
+}
+
+#box1 {
+    background-color: white;
+    position: relative;
+    top: 0px;
+    width: 60%;
+    height: 43px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#box2 {
+    background-color: white;
+    position: relative;
+    top: -43px;
+    width: 38%;
+    left: 62%;
+    height: 43px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#box3 {
+    background-color: white;
+    height: 500px;
+    width: 60%;
+    position: relative;
+    top: -4%;
+}
+
+#box4 {
+    background-color: white;
+    width: 38%;
+    position: relative;
+    top: -84%;
+    left: 62%;
+    height: 500px;
+}
+
+#btn_1 {
+    position: relative;
+    top: -80%;
+    height: 40px;
+    background-color: #077bc3;
+    color: white;
+    font-size: 1.5rem;
+    border: 2px solid #077bc3;
+    border-radius: 5px;
+}
+
+#btn_2 {
+    position: relative;
+    top: -80%;
+    left: 68%;
+    height: 40px;
+    background-color: #077bc3;
+    color: white;
+    font-size: 1.5rem;
+    border: 2px solid #077bc3;
+    border-radius: 5px;
+}
+
+#btn_3 {
+    position: relative;
+    top: -80%;
+    left: 2%;
+    height: 40px;
+    background-color: orange;
+    color: white;
+    font-size: 1.5rem;
+    border: 2px solid #077bc3;
+    border-radius: 5px;
+    width: 100px;
+}
+
+#submit {
+    font-size: 1.5rem;
+    color: white;
+    background-color: #077bc3;
+    border: 2px solid #077bc3;
+    border-radius: 5px;
+    position: relative;
+    top: 6%;
+    left: 25%;
+    height: 40px;
+    width: 150px;
+}
+
+#video {
+    font-size: large;
+    color: white;
+    background-color: #077bc3;
+    border: 2px solid #077bc3;
+    position: relative;
+    height: 100px;
+    width: 130px;
+    top: 4%;
+    left: 28%;
+}
+
+#questions {
+    background-color: #F5F9FF;
+    border: 2px solid #077bc3;
+    position: relative;
+    height: 220px;
+    width: 310px;
+    top: 1%;
+    left: 2%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    overflow-y: scroll;
+    padding: 2px;
+}
+
+#header_2 {
+    font-size: 1.5rem;
+}
+
+#class_1 {
+    position: relative;
+    top: 7%;
+    left: 2%;
+    width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: green;
+}
+
+#class_2 {
+    position: relative;
+    top: 1%;
+    left: 47%;
+    width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: red;
+}
+
+#class_3 {
+    position: relative;
+    top: 2%;
+    left: 3%;
+    width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: blue;
+}
+
+#para1 {
+    position: absolute;
+    top: -77%;
+    left: 160%;
+    font-size: 1rem;
+}
+
+#para2 {
+    position: relative;
+    top: 0px;
+    left: 140%;
+    font-size: 1rem;
+}
+
+#para3 {
+    position: relative;
+    top: 2px;
+    left: 135%;
+    font-size: 1rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: 16px;
+}
+.button.green {
+    background-color: lightgreen;
+}
+.button.red {
+    background-color: lightcoral;
+}
+#button{
+    background: none;
+    border: none;
+}
+/* Media Queries for different screen sizes */
+
+/* Large Screens (1400px and above) */
+@media (min-width: 1400px) {
+    .main-container {
+        width: 75%;
+        /* Set width to 75% */
+        top: 18px;
+    }
+    .calculatorModal {
+        left: -74px;
+    }
+    .calculator{
+        height: 105px;
+        margin-top: 43px;
+    }
+    #box4 {
+        top: -84%;
+    }
+
+    .container_2 {
+        width: 22.5%;
+        /* Set width to 25% */
+        top: 126px;
+        margin-right: 5px;
+    }
+
+    #btn_2 {
+        left: 65%;
+    }
+}
+
+/* Medium Screens (1024px - 1399px) */
+@media (max-width: 1399px) and (min-width: 1024px) {
+    .main-container {
+        width: 75%;
+        top: 18px;
+    }
+.modal-container{
+    left: 17%;
+}
+.calculatorModal {
+    left: -7px;
+}
+    #btn_1 {
+        top: -86%;
+    }
+    #btn_2{
+        top: -86%;
+        left: 47%;
+        width: 21%;
+    }
+    #btn_3 {
+        top: -86%;
+    }
+
+    #box1 {
+        width: 57%;
+    }
+
+    #box3 {
+        width: 57%;
+    }
+    #box2 {
+        left: 60%;
+        width: 37%;
+    }
+    #box4 {
+        left: 60%;
+        width: 37%;
+        top: -87%;
+    }
+
+    #questions {
+        width: 235px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3px;
+    }
+    .container_1 {
+        width: 60%;
+        top: 126px;
+        height: 600px;
+    }
+    .container_2 {
+        width: 24%;
+        top: 126px;
+        height: 600px;
+    }
+
+    #video {
+        width: 55%;
+    }
+
+    .submit-btn {
+        margin-top: 60px;
+        margin-right: 25px;
+    }
+
+}
+
+/* Small Screens (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .main-container {
+        width: 69%;
+        top: 18px;
+    }
+
+    .container_2 {
+        width: 27%;
+        /* Full width for small screens */
+        top: 125px;
+    }
+
+#questions{
+    height: 200px;
+    width: 200px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+}
+    #video {
+        width: 65%;
+    }
+
+    .submit-btn {
+        margin-top: 120px;
+        margin-right: 10px;
+    }
+
+    #greetings{
+        left: 2%;
+    }
+
+    .modal-container{
+        left: 4%;}
+        .calculatorModal {
+            left: 49px;
+        }
+    
+        #btn_2{
+            top: -80%;
+            left: 26%;
+            width: 30%;
+        }
+        #para1 {
+            left: 110%;
+        }
+
+}
+
+/* Extra Small Screens (below 768px) */
+@media (max-width: 767px) {
+    .main-container {
+        width: 90%;
+        top: 18px;
+    }
+
+    .container_2 {
+        width: 100%;
+        top: 18px;
+    }
+}

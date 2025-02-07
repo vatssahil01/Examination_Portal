@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination name</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav">Examination Name</div>
+    </nav>
+    <div class="header">
+        <div id="greetings">Hi taniya, Best of Luck!</div>
+        <div class="modal-container">
+            <!-- Open Calculator Button -->
+            <button type="button" onclick="openCalculator()"
+                class="p-2 bg-blue-500 text-white rounded shadow-md">
+                Calculator
+            </button>
+
+            <!-- Modal for Calculator -->
+            <div id="calculatorModal" class="calculatorModal">
+                <div class="bg-white p-4 rounded-lg shadow-lg w-[360px] h-[420px] relative">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-lg font-semibold">Calculator</h2>
+                        <button onclick="closeCalculator()"
+                            class="text-red-500 font-bold text-2xl">&times;</button>
+                    </div>
+                    <hr class="my-2">
+                    <iframe id="calculatorFrame" src="calculator.html" class="w-full h-full border"></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="time">60 m: 00s </div>
+    </div>
+    <div class="main-container">
+        <div class="container_1">
+            <div id="box1">Questions</div>
+            <div id="box2">Options</div>
+            <div id="box3">Box 3</div>
+            <div id="box4">
+                <option value="opt1">1</option>
+                <option value="opt2">2</option>
+                <option value="opt3">3</option>
+                <option value="opt4">4</option>
+            </div>
+            <button id="btn_1" type="button">Previous</button>
+            <button id="btn_3" type="button">Review</button>
+            <button id="btn_2" type="button">Save & Next</button>
+        </div>
+        <div class="container_2">
+            <span id="header_2">Total questions: 25</span>
+            <br>
+            <span id="header_2">Remaining questions: 10</span>
+            <hr>
+            <div id="questions">
+                <div class="button green"><button id="button" type="button">1</button></div>
+                <div class="button red"><button id="button" type="button">2</button></div>
+                <div class="button"><button id="button" type="button">3</button></div>
+                <div class="button"><button id="button" type="button">4</button></div>
+                <div class="button"><button id="button" type="button">5</button></div>
+                <div class="button"><button id="button" type="button">6</button></div>
+                <div class="button"><button id="button" type="button">7</button></div>
+                <div class="button"><button id="button" type="button">8</button></div>
+                <div class="button"><button id="button" type="button">9</button></div>
+                <div class="button"><button id="button" type="button">10</button></div>
+                <div class="button"><button id="button" type="button">11</button></div>
+                <div class="button"><button id="button" type="button">12</button></div>
+                <div class="button"><button id="button" type="button">13</button></div>
+                <div class="button"><button id="button" type="button">14</button></div>
+                <div class="button"><button id="button" type="button">15</button></div>
+                <div class="button"><button id="button" type="button">16</button></div>
+                <div class="button"><button id="button" type="button">17</button></div>
+                <div class="button"><button id="button" type="button">18</button></div>
+                <div class="button"><button id="button" type="button">19</button></div>
+                <div class="button"><button id="button" type="button">20</button></div>
+                <div class="button"><button id="button" type="button">21</button></div>
+                <div class="button"><button id="button" type="button">22</button></div>
+                <div class="button"><button id="button" type="button">23</button></div>
+                <div class="button"><button id="button" type="button">24</button></div>
+                <div class="button"><button id="button" type="button">25</button></div>
+                <div class="button"><button id="button" type="button">26</button></div>
+                <div class="button"><button id="button" type="button">27</button></div>
+                <div class="button"><button id="button" type="button">28</button></div>
+                <div class="button"><button id="button" type="button">29</button></div>
+                <div class="button"><button id="button" type="button">30</button></div>
+               </div>
+            <div id="class_1"><div class="circle"></div>
+                <p id="para1">Answered</p>
+            </div>
+            <div id="class_2">
+                <p id="para2">NotAnswered</p>
+            </div>
+            <div id="class_3">
+                <p id="para3">Attended</p>
+            </div>
+                <video id="video" width="120" height="100" autoplay></video><br>
+            <button type="submit" id="submit">Submit Test</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
